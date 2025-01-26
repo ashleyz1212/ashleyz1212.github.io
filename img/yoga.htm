@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "https://5203.xg4ken.com/trk/v1?prof=402&camp=52232&affcode=pg1052763949&kct=msn&kchid=3173272&cid=81363942714372&kdv=c&kpid=985201404&criteriaid=pla-4584963494665635&queryStr=yoga%20jpg&adgroupid=1301822064972454&campaignid=412372913&locphy=&url=https://www.etsy.com/listing/985201404/yoga-svg-dxf-png-jpg-digital-download?gpla=1&gao=1&&utm_source=bing&utm_medium=cpc&utm_campaign=shopping_us_-craft_supplies_and_tools-domestic_low&utm_custom1=_k_e49129afd59b1f8175504e3d58aaa79f_k_&utm_content=bing_412372913_1301822064972454_81363942714372_pla-4584963494665635:pla-4584963494665635_c__985201404&utm_custom2=412372913&msclkid=e49129afd59b1f8175504e3d58aaa79f";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com:443/aclick?ld=e8DxrE7nQvM2iNz14geHFlpzVUCUwhKCqWo4wRREO5qKU4mkivOekHlSFDZMfx78Nl2z20k0q7HbtVVrnEXYfFZYJAk8Ij6sMoCice2gyn0FLQ8JzH1-HgZpkBgC6M52gI4-ukxGsXgBgP05epeRChBdJcscz0xbdY5Ugm-dHekLjhnl1kDAmix_x9gc8exHS8a0Z9ZA&amp;u=aHR0cHMlM2ElMmYlMmY1MjAzLnhnNGtlbi5jb20lMmZ0cmslMmZ2MSUzZnByb2YlM2Q0MDIlMjZjYW1wJTNkNTIyMzIlMjZhZmZjb2RlJTNkcGcxMDUyNzYzOTQ5JTI2a2N0JTNkbXNuJTI2a2NoaWQlM2QzMTczMjcyJTI2Y2lkJTNkODEzNjM5NDI3MTQzNzIlMjZrZHYlM2RjJTI2a3BpZCUzZDk4NTIwMTQwNCUyNmNyaXRlcmlhaWQlM2RwbGEtNDU4NDk2MzQ5NDY2NTYzNSUyNnF1ZXJ5U3RyJTNkeW9nYSUyNTIwanBnJTI2YWRncm91cGlkJTNkMTMwMTgyMjA2NDk3MjQ1NCUyNmNhbXBhaWduaWQlM2Q0MTIzNzI5MTMlMjZsb2NwaHklM2QlMjZ1cmwlM2RodHRwcyUzYSUyZiUyZnd3dy5ldHN5LmNvbSUyZmxpc3RpbmclMmY5ODUyMDE0MDQlMmZ5b2dhLXN2Zy1keGYtcG5nLWpwZy1kaWdpdGFsLWRvd25sb2FkJTNmZ3BsYSUzZDElMjZnYW8lM2QxJTI2JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkc2hvcHBpbmdfdXNfLWNyYWZ0X3N1cHBsaWVzX2FuZF90b29scy1kb21lc3RpY19sb3clMjZ1dG1fY3VzdG9tMSUzZF9rX2U0OTEyOWFmZDU5YjFmODE3NTUwNGUzZDU4YWFhNzlmX2tfJTI2dXRtX2NvbnRlbnQlM2RiaW5nXzQxMjM3MjkxM18xMzAxODIyMDY0OTcyNDU0XzgxMzYzOTQyNzE0MzcyX3BsYS00NTg0OTYzNDk0NjY1NjM1JTNhcGxhLTQ1ODQ5NjM0OTQ2NjU2MzVfY19fOTg1MjAxNDA0JTI2dXRtX2N1c3RvbTIlM2Q0MTIzNzI5MTMlMjZtc2Nsa2lkJTNkZTQ5MTI5YWZkNTliMWY4MTc1NTA0ZTNkNThhYWE3OWY&amp;rlid=e49129afd59b1f8175504e3d58aaa79f&amp;ntb=1&amp;ntb=1&amp;ntb=1&amp;ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>
